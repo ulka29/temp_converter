@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Temperature Converter</h1>
+      
+      <div class="temp-container">
+        <label for="celsius">Celsius:</label>
+        <input
+          onchange="computeTemp(event)"
+          type="number"
+          name="celsius"
+          id="celsius"
+          placeholder="Enter Temperature"
+          class="input"
+        />
+      </div>
+
+      <div class="temp-container">
+        <label for="fahrenheit">Fahrenheit:</label>
+        <input
+          onchange="computeTemp(event)"
+          type="number"
+          name="fahrenheit"
+          id="fahrenheit"
+          placeholder="Enter Temperature"
+          class="input"
+        />
+      </div>
+
+      <div class="temp-container">
+        <label for="kelvin">Kelvin:</label>
+        <input
+          onchange="computeTemp(event)"
+          type="number"
+          name="kelvin"
+          id="kelvin"
+          placeholder="Enter Temperature"
+          class="input"
+        />
+      </div>
+
+      <div id="feel" class="feel-indicator">🌡️ Temperature Feel: --</div>
+
+    </div>
+
+    <div class="quiz-container">
+      <h2>Temperature Quiz Mode 🎯</h2>
+      <p>Guess the temperature feel for: <span id="quiz-temp">--</span>°C</p>
+    
+      <div class="quiz-options">
+        <button onclick="checkAnswer('Hot')">🔥 Hot</button>
+        <button onclick="checkAnswer('Warm')">☀️ Warm</button>
+        <button onclick="checkAnswer('Cool')">❄️ Cool</button>
+        <button onclick="checkAnswer('Cold')">🥶 Cold</button>
+      </div>
+    
+      <p id="quiz-result"></p>
+      <p>Score: <span id="quiz-score">0</span></p>
+      <button onclick="generateQuiz()" id="result">New Temperature</button>
+    </div>
+    
+
+    <script src="index.js"></script>
+  </body>
+</html>
